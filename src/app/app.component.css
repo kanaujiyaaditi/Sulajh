@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*******************************/
 /********* General CSS *********/
 /*******************************/
@@ -1771,3 +1772,6 @@ a:focus {
       text-align: center;
   }
 }
+=======
+@import '~bootstrap/dist/css/bootstrap.min.css';
+>>>>>>> b99cef4 (Added phone icon)
