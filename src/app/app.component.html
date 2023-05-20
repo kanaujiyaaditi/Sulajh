@@ -9,6 +9,27 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <style>
+
+  #boxes #dialog{
+    width: 650px;
+    height:auto;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 15pt;
+    position: fixed;
+  }
+  #boxes .window{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 200px;
+    width: 440px;
+    display: none;
+    padding: 20px;
+    z-index: 9999999999999999999;
+    border-radius: 15px;
+    text-align: center;
+  }
   :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 14px;
@@ -30,7 +51,9 @@
   p {
     margin: 0;
   }
-
+  .element1{
+    margin-right: 30px;
+  }
   .spacer {
     flex: 1;
   }
@@ -40,14 +63,31 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 60px;
+    height: 100px;
     display: flex;
     align-items: center;
-    background-color: #1976d2;
+    background-color: #9e6540;
     color: white;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 300%;
+    font-family: Arial Nova ;
   }
+  .head{
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #9e6540;
+    color: white;
+    font-weight: 500;
+    font-size: 60%;
+    font-family: Arial Nova ;
+    justify-content: space-between;
 
+  }
   .toolbar img {
     margin: 0 16px;
   }
@@ -136,7 +176,7 @@
   }
 
   .card.highlight-card {
-    background-color: #1976d2;
+    background-color: #9e6540;
     color: white;
     font-weight: 600;
     border: none;
@@ -167,12 +207,12 @@
   a,
   a:visited,
   a:hover {
-    color: #1976d2;
+    color: white;
     text-decoration: none;
   }
 
   a:hover {
-    color: #125699;
+    color: #5b3914;
   }
 
   .terminal {
@@ -305,29 +345,92 @@
 
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-  <img
-    width="40"
+  <!-- <img
+    width="60"
     alt="Angular Logo"
     src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
-  />
-  <span>Welcome to Sulajh</span>
+  /> -->
+  <!-- <div id="boxes">
+  <div style="top: 147.5px; left: 405px; display: block;" id="dialog" class="window">
+    <div class="row">
+      ::before
+  <div class="col-md-6">
+  <img src="images/logo/At-law-logo.jpg" alt="">
+  </div>
+          <div class="col-md-6">
+      <div id="lorem">
+        <p>As per the norms set by the Bar Council of India,
+          law firms are not authorized to solicit work and publicize.
+          All the information, publications and legal commentary provided on
+          www.atlawchamber.com is for illustrative purposes only and should not
+          be regarded or relied upon as legal advice. While the content provided
+          is accurate as at the date of first publication, it is updated frequently
+           when laws and regulations change. The site clearly states it is not intended
+          to be a source of advertising or solicitation, nor is it an invitation for a
+          lawyer-client relationship, and transmission, receipt or use of the site does
+          not constitute or create a lawyer-client relationship.
+          By clicking the “Accept” button, the user accepts that he/she is doing it out of free will and is solely at the user's own risk.</p>
+      </div>
+    </div>
+    ::after
+	</div>
+    <div id="popupfoot"> <a href="#" class="close agree">Accept</a>
+       <a class="agree" href="#">Decline</a> </div>
+  </div>
+</div> -->
+  <span >Sulajh</span>
     <div class="spacer"></div>
-    <a aria-label="Email" target="_blank" rel="noopener" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCKHRMJrfsjsqTSbcPbSGldTfskRdwgHdnmsnPCwCsfzqnbMPlsLCVbwLHCKWZkFVMtdbwjV" title="Twitter">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+    <div class="head">
+      <div class="element1" left>
+        <a  target="_blank"  routerLink="/home">
+          <span>Home</span>
+        </a>
+      </div>
+      <div class="element1">
+       <a  target="_blank"  routerLink="/practice">
+        <span>Practice Areas</span>
+       </a>
+      </div>
+      <div class="element1"><a  target="_blank"  routerLink="/probono">
+        <span>Pro bono</span>
+       </a>
+      </div>
+       <div class="element1"><a  target="_blank"  routerLink="/career">
+        <span>Career</span>
+       </a>
+      </div>
+      <div class="element1" >
+      <a  target="_blank"  routerLink="/team">
+        <span>Team</span>
+       </a>
+      </div>
+      <div class="element1">
+      <a  target="_top" rel="noopener" routerLink="/contactUs">
+        <span>Contact Us</span>
+       </a>
+      </div>
+    <a aria-label="Email" target="_blank" rel="noopener" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=jrjtXLFTwmLzGRVRBTfFbWdJRxfbgtBCNsSZTRGHjSQnPrWZQgwjrpdTfTGNlgmQGsGfCqjr" title="Email">
+      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#fff" class="bi bi-envelope-fill" viewBox="0 0 24 24">
         <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
       </svg>
     </a>
-    <a aria-label="Phone" target="_blank" rel="noopener" href="https://youtube.com/angular" title="YouTube">
+    <!-- <button (click)="openDialPad()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#fff" class="bi bi-envelope-fill" viewBox="0 0 24 24">
+      <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+    </svg>
+  </button> -->
+
+    <a aria-label="Phone" target="_blank" rel="noopener" routerLink="/dialButtonComponent" title="YouTube">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-telephone-fill" viewBox="0 0 24 24">
         <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
       </svg>
     </a>
 </div>
-
+</div>
 <div class="content" role="main">
 
   <!-- Highlight Card -->
-  <div class="card highlight-card card-small">
+  <!-- <div class="card highlight-card card-small">
 
     <svg id="rocket" xmlns="http://www.w3.org/2000/svg" width="101.678" height="101.678" viewBox="0 0 101.678 101.678">
       <title>Rocket Ship</title>
@@ -340,17 +443,23 @@
       </g>
     </svg>
 
-    <span>{{ title }} app is running!</span>
+    <span>Experienced,Strong advocacy and Ethical</span> -->
 
-    <svg id="rocket-smoke" xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632" viewBox="0 0 516.119 1083.632">
+    <!-- <svg id="rocket-smoke" xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632" viewBox="0 0 516.119 1083.632">
       <title>Rocket Ship Smoke</title>
       <path id="Path_40" data-name="Path 40" d="M644.6,141S143.02,215.537,147.049,870.207s342.774,201.755,342.774,201.755S404.659,847.213,388.815,762.2c-27.116-145.51-11.551-384.124,271.9-609.1C671.15,139.365,644.6,141,644.6,141Z" transform="translate(-147.025 -140.939)" fill="#f5f5f5"/>
+    </svg> -->
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632" viewBox="0 0 516.119 1083.632" fill="#125699" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2L2 7V19H22V7L12 2ZM3 9H21M9 9V21M15 9V21" />
     </svg>
 
-  </div>
+
+  </div> -->
 
   <!-- Resources -->
-  <h2>Resources</h2>
+  <!-- <p style="color: #f40808;">hii
+  </p>
+  <h2 >Resources</h2>
   <p>Here are some links to help you get started:</p>
 
   <div class="card-container">
@@ -385,7 +494,7 @@
 
   </div>
 
-  <!-- Next Steps -->
+  <!-- Next Steps
   <h2>Next Steps</h2>
   <p>What do you want to do next with your app?</p>
 
@@ -423,7 +532,7 @@
     </button>
   </div>
 
-  <!-- Terminal -->
+  <!-- Terminal
   <div class="terminal" [ngSwitch]="selection.value">
       <pre *ngSwitchDefault>ng generate component xyz</pre>
       <pre *ngSwitchCase="'material'">ng add @angular/material</pre>
@@ -433,7 +542,7 @@
       <pre *ngSwitchCase="'build'">ng build</pre>
   </div>
 
-  <!-- Links -->
+  <!-- Links
   <div class="card-container">
     <a class="circle-link" title="Find a Local Meetup" href="https://www.meetup.com/find/?keywords=angular" target="_blank" rel="noopener">
       <svg xmlns="http://www.w3.org/2000/svg" width="24.607" height="23.447" viewBox="0 0 24.607 23.447">
@@ -451,7 +560,7 @@
     </a>
   </div>
 
-  <!-- Footer -->
+  <!-- Footer
   <footer>
       Love Angular?&nbsp;
       <a href="https://github.com/angular/angular" target="_blank" rel="noopener"> Give our repo a star.
@@ -470,7 +579,7 @@
     <path id="Path_39" data-name="Path 39" d="M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z" transform="translate(142.69 -634.312)" fill="#eee"/>
   </svg>
 
-</div>
+</div> -->
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
@@ -479,5 +588,8 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- <app-dial-pad-button></app-dial-pad-button>-->
+<app-home></app-home>
 
 <router-outlet></router-outlet>
+
